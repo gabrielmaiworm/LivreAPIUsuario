@@ -48,6 +48,8 @@ public class CacheConfiguration {
             createCache(cm, com.biomob.livre.domain.User.class.getName());
             createCache(cm, com.biomob.livre.domain.Authority.class.getName());
             createCache(cm, com.biomob.livre.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.biomob.livre.domain.Usuario.class.getName());
+            createCache(cm, com.biomob.livre.domain.Endereco.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
