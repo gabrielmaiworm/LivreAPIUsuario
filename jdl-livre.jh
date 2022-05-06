@@ -1,0 +1,53 @@
+entity Usuario {
+nome String,
+email String
+nascimento LocalDate,
+documento String,
+lesao Lesao,
+situacao Situacao,
+usoProprio Boolean,
+nomeDependente String,
+nascimentoDependente LocalDate,
+facebook String,
+instagram String,
+termo Boolean,
+treinamento Boolean,
+fotoDoc ImageBlob,
+fotoComDoc ImageBlob,
+}
+
+entity Endereco {
+cep String,
+logradouro String,
+numero Integer,
+complemento String,
+bairro String,
+cidade String,
+estado Estado,
+}
+
+enum Estado {
+	AC, AL, AP, AM, BA, CE, DF, ES,
+    GO, MA, MT, MS, MG, PA, PB, PR, PE, 
+    PI, RJ, RN, RS, RO, RR, SC, SP, SE, TO  
+}
+
+enum Lesao {
+	PARAPLEGIA, TETRAPLEGIA, AMPUTADO, MOBILIDADE_REDUZIDA, LESAO_TEMPORARIA,
+    SEM_LESAO, OUTRO
+}
+
+enum Situacao {
+	TEMPORARIA, PERMANTENTE
+}
+
+relationship OneToOne {
+	Usuario to Endereco
+}
+
+
+
+
+
+
+
