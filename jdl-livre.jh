@@ -45,6 +45,10 @@ relationship OneToOne {
 	Usuario to Endereco
 }
 
+relationship OneToOne {
+	User to Usuario
+}
+
 
 
 
